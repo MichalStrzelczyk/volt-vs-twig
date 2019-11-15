@@ -1,0 +1,13 @@
+{% extends 'test-4-template.twig' %}
+
+{% block body %}
+    <main role="main">
+        {% for index in 0..100 %}
+            {%  include "partials/content/content_with_index.volt" with  {'index':index} only %}
+        {% endfor %}
+    </main>
+{% endblock %}
+
+{% block footer %}
+    {% include "partials/footer.twig" %}
+{% endblock %}
